@@ -12,7 +12,7 @@
     "build-single": "node scripts/generateSingleExport.mjs",
     "build": "npm run build-single && rm -rf lib/* && rollup -c --bundleConfigAsCjs --forceExit && node scripts/generatePackages.mjs && node scripts/postBuild.mjs",
     "build-styles": "node scripts/buildStyles.mjs",
-    "publish-lib": "npm run build && cp .npmrc ./lib && npm publish lib"
+    "publish-lib": "npm run build && cp .npmrc ./lib && npm publish ./lib"
   },
   "files": ["lib/*"],
   "keywords": [],

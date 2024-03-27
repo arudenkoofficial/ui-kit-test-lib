@@ -34,7 +34,7 @@ fs.readdirSync(COMPONENTS_PATH, { withFileTypes: true }).forEach((item) => {
 })
 
 const rootPackageName = `${COMPONENTS_PATH}/package.json`
-fs.writeFile(rootPackageName, JSON.stringify({...pkg, main: "./index.cjs", module: "./index.js", typings: "./index.d.ts"}), (err) => {
+fs.writeFile(rootPackageName, JSON.stringify({...pkg, files: undefined, main: "./index.cjs", module: "./index.js", typings: "./index.d.ts"}), (err) => {
   if (err) throw err
       console.log('root package.json created')
 })
